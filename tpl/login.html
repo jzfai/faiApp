@@ -1,0 +1,20 @@
+<ion-content id="login">
+    <div class="list list-inset" >
+        <div class="text-center header">- 账号登陆 -</div>
+        <div class="item item-input">
+            <label>
+                <input type="text" placeholder="用户名" ng-model="log.name" autofocus/>
+            </label>
+        </div>
+        <div class="item-input item">
+            <label>
+                <input type="text" placeholder="密码" ng-model="log.pwd"/>
+            </label>
+        </div>
+        <button class="button button-energized button-block" ng-click="toLogin()">登陆</button>
+        <div class="ant">
+            <a href="#/yyRegister" class="button-calm button-small button ">新用户注册</a>
+            <a ng-click="show()" class="button-royal button-small button">关于我们</a>
+        </div>
+    </div>
+</ion-content>

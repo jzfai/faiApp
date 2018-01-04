@@ -1,0 +1,36 @@
+<ion-content class="has-header has-footer" id="register">
+    <div class="text-center header">用户注册</div>
+    <div class="list list-inset">
+        <label class="item item-input">
+            <i class="icon ion-person"></i>
+            <input type="text" placeholder="用户名" ng-model="reg.name" />
+        </label>
+        <label class="item item-input">
+            <i class="icon ion-iphone "></i>
+            <input type="text" placeholder="手机号" ng-model="reg.phone"/>
+        </label>
+        <label class="item item-input">
+            <i class="icon ion-ios-compose-outline"></i>
+            <input type="text" placeholder="验证码" ng-model="reg.valid" />
+        </label>
+        <label class="item item-input">
+            <i class="icon ion-ios-locked-outline"></i>
+            <input type="text" placeholder="密码"  ng-model="reg.pwd"/>
+        </label>
+        <label class="item item-input">
+            <i class="icon ion-at"></i>
+            <input type="text" placeholder="邮箱" ng-model="reg.email" />
+        </label>
+        <ion-list>
+            <ion-radio value="1" ng-model="reg.sex">男</ion-radio>
+            <ion-radio value="1" ng-model="reg.sex">女</ion-radio>
+        </ion-list>
+        <button  class="button button-energized button-block" ng-click="toRegister()">
+            注册
+        </button>
+        <div class="ant">
+            <a href="#/yyLogin" class="button-positive button-small button">已有账号去登陆</a>
+        </div>
+    </div>
+</ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

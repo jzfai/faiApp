@@ -1,0 +1,32 @@
+   <div class="list list-inset" id="input">
+        <div class="item item-input item-icon-right"  >
+            <input type="text" placeholder="请输入关键字" autofocus ng-model="inputValue"/>
+            <i class="icon ion-search" ></i>
+        </div>
+    </div>
+
+<!--&lt;!&ndash;轮播广告&ndash;&gt;-->
+   <!--<div id="carousel" class="list list-inset">-->
+       <!--<img src="img/p2679.jpg" class="img-responsive"/>-->
+       <!--<img src="img/p6611.jpg" class="img-responsive"/>-->
+       <!--<img src="img/p6611.jpg" class="img-responsive"/>-->
+       <!--<img src="img/p6611.jpg" class="img-responsive"/>-->
+   <!--</div>-->
+
+<ion-content class="has-footer has-header" id="index">
+    <div class="list list-inset">
+
+        <a href="#/yyDetail/{{dish.pId}}" class="item item-text-wrap item-thumbnail-left"
+                ng-repeat="dish in iList">
+            <img ng-src="img/{{dish.img}}"/>
+            <h3>{{dish.title}}</h3>
+            <p>{{dish.detail}}</p>
+            <p>{{dish.price | currency:'￥'}}</p>
+        </a>
+        <ion-infinite-scroll on-infinite="toInfinite()" ng-if="hasMore"></ion-infinite-scroll>
+        <div>
+            <p ng-hide="hasMore">亲！没有数据了喔</p>
+        </div>
+    </div>
+</ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

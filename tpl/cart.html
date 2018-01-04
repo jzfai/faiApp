@@ -1,0 +1,31 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<ion-content id="cart" class="has-footer has-header">
+    <h3 class="text-center">我的购物车</h3>
+    <!-- header-->
+    <div class="row row-center header">
+        <div class="col  col-30">菜品名字</div>
+        <div class="col col-offset-10 col-30 ">数量</div>
+        <div class="col">价格</div>
+    </div>
+    <!-- footer-->
+    <div class="row row-center numb" ng-repeat="dish in cList">
+        <div class="col col-30">{{dish.title}}</div>
+        <div class="col col-30 ">
+            <output ng-click="decBtn($event,$index)">-</output>
+            <span>1</span>
+            <output ng-click="incBtn($event,$index)">+</output>
+        </div>
+        <div class="col-30" >
+            ￥<span class="xSum" ng-click="xSum($event,dish.price)">{{dish.price}}</span>
+            <a href="" class="delRow" ng-click="delRow($event,dish.pId)">Delete</a>
+        </div>
+    </div>
+    <div class="addSum">
+        合计:<span>100</span>rmb
+    </div>
+    <div class="toOrder" ng-click="jump('order')">
+        <a href="" class="button-balanced button-small button ">去结算</a>
+    </div>
+</ion-content>
+<div ng-include="'tpl/include/header.html'"></div>
